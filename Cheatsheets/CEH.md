@@ -58,7 +58,7 @@ and start the process
 
 > service tor start
 
-### Proxychains
+### proxychains
 
 * Config File: 
   * /etc/proxychains.conf
@@ -119,8 +119,6 @@ http://scanme.nmap.org/
 Usage
 
 > nmap -v -A scanme.nmap.org
-
-
 
 ### nslookup
 

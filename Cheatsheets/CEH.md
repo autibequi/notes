@@ -35,12 +35,26 @@ The image comes barebones and you may need to install other applications. There 
 * VPS - Virtual Private Server - ?
 * Reverse Shells - Opens a reverse connection to control current shell.
 
+* 
+
+## Tools
+
 ## The Onion Road
 
 ### Links Trackers
 
-* https://ahmia.fi
-* http://hiddenwiki.me/
-* http://hiddenwikitor.org/
-* https://thehiddenwiki.org/
+- https://ahmia.fi/
+- http://hiddenwiki.me/
+- http://hiddenwikitor.org/
+- https://thehiddenwiki.org/
+
+## Service
+
+You can use tor as a proxy/vpn service simple install it.
+
+> apt install tor
+
+and start the process
+
+> service tor start
 

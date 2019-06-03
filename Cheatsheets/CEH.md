@@ -82,6 +82,31 @@ Usage:
 
 Make sure to exit all browsers before running it.
 
+### macchanger
+
+MAC address can leak data. 
+
+XX:XX:XX:XX:XX:XX
+
+The first three pairs identify the manufacture.
+
+The last three can be set as anything by the manufacture.
+
+The address doesnt leave the local network.
+
+Usage
+
+Revel current MAC address
+
+> macchanger --show eth0
+
+Randomize Adress
+
+> macchanger -r eth0
+
+Change Address
+
+> macchanger --mac=<ADDRESS> eth0
 
 ## Miscellaneous
 

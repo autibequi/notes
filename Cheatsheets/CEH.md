@@ -14,7 +14,7 @@ All commands here were executed on in the oficial `Kali Linux` docker image (bec
 
 To create a container that will keep running in the background run:
 
-> docker run -d --name kali kalilinux/kali-linux-docker tail -f /dev/null
+> docker run --net="host" --privileged -d --name kali kalilinux/kali-linux-docker tail -f /dev/null 
 
 If the container is not running simply execute:
 

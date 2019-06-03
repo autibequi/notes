@@ -108,6 +108,28 @@ Change Address
 
 > macchanger --mac=<ADDRESS> eth0
 
+### nmap
+
+Network mapper
+
+Available network to scan train
+
+http://scanme.nmap.org/
+
+Usage
+
+> nmap -v -A scanme.nmap.org
+
+
+
+### nslookup
+
+Looks up for DNS information of an domain.
+
+> nslookup scanme.nmap.org
+
+
+
 ## Miscellaneous
 
 ### Change local DNS provider
@@ -135,3 +157,27 @@ Run:
 Add:
 
 > @reboot /path/to/shell/script/file
+
+
+
+### AWK
+
+Usage:
+
+Define `space` as a field delimiter and print the second column value.
+
+> cat bleh.txt | awk -F " "  '{print $2}'
+
+**Pro Tip**: Avoid piping data out of the expected format to AWK.
+
+
+
+### ipinfo.io
+
+Service to define an fisical location address of an IP.
+
+> curl ipinfo.ip/<IP ADDRESS>
+
+## Resources
+
+* [Exploit Database](https://www.exploit-db.com/)

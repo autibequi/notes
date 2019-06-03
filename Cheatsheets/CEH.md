@@ -74,6 +74,14 @@ Proxychains call example:
 
 > proxychains curl https://duckduckgo.com
 
+### openvpn
+
+Usage:
+
+> openvpn <A_FILE_FROM_WEBZ>.ovpn 
+
+Make sure to exit all browsers before running it.
+
 
 ## Miscellaneous
 

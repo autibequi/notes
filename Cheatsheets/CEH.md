@@ -74,3 +74,21 @@ Proxychains call example:
 
 > proxychains curl https://duckduckgo.com
 
+
+## Miscellaneous
+
+### Change local DNS provider
+
+Usefull to avoid leak any data to untrustworthy DNS provider and/or to fix resolving issues.
+
+Modify file 
+
+>  vi /etc/dhcp/dhclient.conf
+
+Restart network daemon
+
+>service network-manager restart
+
+Trusty and Secure DNS providers:
+
+* [OpenDNS](https://www.opendns.com/setupguide/)

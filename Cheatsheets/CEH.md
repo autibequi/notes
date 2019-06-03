@@ -58,3 +58,19 @@ and start the process
 
 > service tor start
 
+### Proxychains
+
+* Config File: 
+  * /etc/proxychains.conf
+* Configs
+  * **dynamic_chain**: skip dead proxies (usefull if using free proxies)
+  * **strict_chain**: doesn’t skip dead proxies
+  * **random_chain**: randomly pick a proxy from list at each request
+  * **proxy_dns**: avoid dns leaks that can lead to your location
+* SOCKS5 is the best
+* Add `socks5  127.0.0.1  9050` to the config file to add TOR as a proxy.
+
+Proxychains call example:
+
+> proxychains curl https://duckduckgo.com
+

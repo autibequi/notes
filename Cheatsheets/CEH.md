@@ -12,9 +12,19 @@ The notes in this file are based (but not limited) on  [The Complete Ethical Hac
 
 All commands here were executed on in the oficial `Kali Linux` docker image (because I’m too lazy to setup a full VM).
 
-To create a container and `ssh` over it, execute the following command:
+To create a container that will keep running in the background run:
 
-> docker run -ti kalilinux/kali-linux-docker /bin/bash
+> docker run -d --name kali kalilinux/kali-linux-docker tail -f /dev/null
+
+If the container is not running simply execute:
+
+> docker start kali
+
+And to `ssh` over it run:
+
+> docker exec -it kali bash
+
+This setup will able the user to download more apps and keep it even in the case of a container restart.
 
 The image comes barebones and you may need to install other applications. There is a list of [metapackages](https://www.kali.org/news/kali-linux-metapackages) that can be installed with bundle of softwares required to use these notes.
 

@@ -126,7 +126,64 @@ Looks up for DNS information of an domain.
 
 > nslookup scanme.nmap.org
 
+### aircrack-ng
 
+First change the wireless card to promíscuos Mode:
+
+> ifconfig <CARDNAME> down
+> ifconfig <CARDNAME> mode monitor
+> ifconfig <CARDNAME> up
+
+This will allow to the card read data not directed to it.
+
+#### Bruteforce Cracking
+
+> aircrack-ng -w <WORD-LIST-FILE> -e <ESSID>
+
+* <ESSID> Target
+* <WORD-LIST-FILE> File with words to be used in the attack.
+
+### airmon-ng
+
+Find processas that can cause trouble to aircrack.
+
+> airmon-ng check <CARDNAME>
+
+### airodump-ng
+
+Scans for all networks available:
+
+> airodump-ng <CARDNAME>
+
+That will list informations like: BSSID, channel, signal strength, etc
+
+Dumps da ta of a specific network:
+
+> airodump-ng -c <CHANNEL> --bssid <BSSID> -w <RUNNAME>
+
+### aireplay-ng
+
+De-authenticate all devices of a defined network
+
+> aireplay-ng --deauth <ITERATIONS> -a <BSSID>
+
+* <ITERATIONS> Amount of deauth attack iterations. If equals `0` it will run as an infinite loop
+
+### crunch
+
+Creates a wordlist based on criteria you specify.
+
+> crunch -t <PATTERN> -f <CHARSET-FILE>
+
+The output can be piped to `aircrack-ng`.
+
+* <PATTERN> Pattern of the words that will be created 
+
+* <CHARSET-FILE> Charset of the keys used to build words.
+
+### reaver
+
+> TODO
 
 ## Miscellaneous
 

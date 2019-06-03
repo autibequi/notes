@@ -125,3 +125,13 @@ Restart network daemon
 Trusty and Secure DNS providers:
 
 * [OpenDNS](https://www.opendns.com/setupguide/)
+
+### Setup a CRON at reboot
+
+Run:
+
+> crontab -e
+
+Add:
+
+> @reboot /path/to/shell/script/file

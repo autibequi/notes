@@ -39,16 +39,16 @@ The image comes barebones and you may need to install other applications. There 
 
 ## Tools
 
-## The Onion Road
+### The Onion Road
 
-### Links Trackers
+#### Links Trackers
 
 - https://ahmia.fi/
 - http://hiddenwiki.me/
 - http://hiddenwikitor.org/
 - https://thehiddenwiki.org/
 
-## Service
+#### Service
 
 You can use tor as a proxy/vpn service simple install it.
 

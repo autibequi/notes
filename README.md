@@ -4,14 +4,17 @@ This is a simple repository so that I can save/share some knowledge that is not 
 
 Another reason is the ease of sharing.
 
-I could use Google docs but I just enjoy taking notes with markdown.
+I could use Google Docs but I just enjoy taking notes with markdown.
 
-Most notes were made using Typora.
+Most notes were made using [Typora](https://typora.io/).
+
+Feel free to submit any fixes to any text in this repository to contribute for a `error free` internet.
 
 ## Folders
 
-* Articles
+* Articles - Mostly in PTBR
 * Cheatsheet - Mostly study notes
+  * [Certified Ethica Hacker “Training”](./Cheatsheets/CEH.md)
 
 ## License
 

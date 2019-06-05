@@ -12,9 +12,11 @@ Feel free to submit any fixes to any text in this repository to contribute for a
 
 ## Folders
 
-* Articles - Mostly in PTBR
-* Cheatsheet - Mostly study notes
-  * [Certified Ethica Hacker “Training”](./Cheatsheets/CEH.md)
+* articles - Mostly in PTBR
+* study - Mostly study notes
+  * [Certified Ethica Hacker “Training”](./study/CEH.md)
+* cheatsheets
+  * [vscode](./cheatsheets/vscode.md)
 
 ## License
 

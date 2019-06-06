@@ -18,10 +18,6 @@ map u scrollPageUp
 map gg scrollToTop
 map G scrollToBottom
 
-# Misc
-map yy copyCurrentUrl
-map o Vomnibar.activate
-
 # Open Link
 map f LinkHints.activateMode
 map F LinkHints.activateModeToOpenInNewTab
@@ -36,9 +32,10 @@ map J previousTab
 map K nextTab
 map p togglePinTab
 
-map << moveTabLeft
-map >> moveTabsRight
+map ,, moveTabLeft
+map .. moveTabRight
 
-# Help
+# Misc
+map yy copyCurrentUrl
 map ? showHelp
 ```

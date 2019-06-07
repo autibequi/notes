@@ -78,7 +78,7 @@ Proxychains call example:
 
 Usage:
 
-> openvpn <A_FILE_FROM_WEBZ>.ovpn 
+> openvpn `A_FILE_FROM_WEBZ`.ovpn 
 
 Make sure to exit all browsers before running it.
 
@@ -106,7 +106,7 @@ Randomize Adress
 
 Change Address
 
-> macchanger --mac=<ADDRESS> eth0
+> macchanger --mac=`ADDRESS` eth0
 
 ### nmap
 
@@ -130,56 +130,56 @@ Looks up for DNS information of an domain.
 
 First change the wireless card to promíscuos Mode:
 
-> ifconfig <CARDNAME> down
-> ifconfig <CARDNAME> mode monitor
-> ifconfig <CARDNAME> up
+> ifconfig `CARDNAME` down
+> ifconfig `CARDNAME` mode monitor
+> ifconfig `CARDNAME` up
 
 This will allow to the card read data not directed to it.
 
 #### Bruteforce Cracking
 
-> aircrack-ng -w <WORD-LIST-FILE> -e <ESSID>
+> aircrack-ng -w `WORD-LIST-FILE` -e `ESSID`
 
-* <ESSID> Target
-* <WORD-LIST-FILE> File with words to be used in the attack.
+* `ESSID` Target
+* `WORD-LIST-FILE` File with words to be used in the attack.
 
 ### airmon-ng
 
 Find processas that can cause trouble to aircrack.
 
-> airmon-ng check <CARDNAME>
+> airmon-ng check `CARDNAME`
 
 ### airodump-ng
 
 Scans for all networks available:
 
-> airodump-ng <CARDNAME>
+> airodump-ng `CARDNAME`
 
 That will list informations like: BSSID, channel, signal strength, etc
 
 Dumps da ta of a specific network:
 
-> airodump-ng -c <CHANNEL> --bssid <BSSID> -w <RUNNAME>
+> airodump-ng -c `CHANNEL` --bssid `BSSID` -w `RUNNAME`
 
 ### aireplay-ng
 
 De-authenticate all devices of a defined network
 
-> aireplay-ng --deauth <ITERATIONS> -a <BSSID>
+> aireplay-ng --deauth `ITERATIONS` -a `BSSID`
 
-* <ITERATIONS> Amount of deauth attack iterations. If equals `0` it will run as an infinite loop
+* `ITERATIONS` Amount of deauth attack iterations. If equals `0` it will run as an infinite loop
 
 ### crunch
 
 Creates a wordlist based on criteria you specify.
 
-> crunch -t <PATTERN> -f <CHARSET-FILE>
+> crunch -t `PATTERN` -f `CHARSET-FILE`
 
 The output can be piped to `aircrack-ng`.
 
-* <PATTERN> Pattern of the words that will be created 
+* `PATTERN` Pattern of the words that will be created 
 
-* <CHARSET-FILE> Charset of the keys used to build words.
+* `CHARSET-FILE` Charset of the keys used to build words.
 
 ### reaver
 
@@ -231,7 +231,7 @@ Define `space` as a field delimiter and print the second column value.
 
 Service to define an fisical location address of an IP.
 
-> curl ipinfo.ip/<IP ADDRESS>
+> curl ipinfo.ip/`IP ADDRESS`
 
 ## Resources
 

@@ -10,6 +10,8 @@ The notes in this file are based (but not limited) on  [The Complete Ethical Hac
 
 ## Environment
 
+The following setup will only works completly on Linux. The goddman osx runs docker inside a VM so it’s not possible to access the networks interfaces using it. If the command you want doesnt need direct access to the network interface (like wifi network attacks) then you may use it fine.
+
 All commands here were executed on in the oficial `Kali Linux` docker image (because I’m too lazy to setup a full VM).
 
 To create a container that will keep running in the background run:
@@ -35,7 +37,7 @@ The image comes barebones and you may need to install other applications. There 
 * VPS - Virtual Private Server - ?
 * Reverse Shells - Opens a reverse connection to control current shell.
 
-* 
+* SSL Strip - Remove Pprotection from HTTPS requests
 
 ## Tools
 
@@ -171,6 +173,10 @@ De-authenticate all devices of a defined network
 
 * `ITERATIONS` Amount of deauth attack iterations. If equals `0` it will run as an infinite loop
 
+#### DoS Attack
+
+> aireplay --deauth 0 -a `BSSID` `NET INTERFACE`
+
 ### crunch
 
 Creates a wordlist based on criteria you specify.
@@ -183,11 +189,56 @@ The output can be piped to `aircrack-ng`.
 
 * `CHARSET-FILE` Charset of the keys used to build words.
 
+### wash
+
+Search for WIFI networks using a wificard.
+
+> wash -i `interface`
+
+Look for `WPS Locked` equals to `No`. 
+
+Thoses networks can be cracked using [reaver](#reaver)
+
+#### If something goes wrong run:
+
+> mkdir /etc/reaver
+
 ### reaver
 
-> TODO
+For cracking WPS protected networks.
+
+WPS uses 4-8 numbers PIN.
+
+It’s required to set the wifi card in promíscuos mode.
+
+Run `arimon-ng check <<card>>` before to check for issues before running reaver.
+
+> reaver -b `TARGET MAC ADDRESS` -i `INTERFACE` -c `TARGET CHANNEL` -r `TRIES`:`SECONDS`
+
+* Look for reverse engineered scripts that can generate WPS PIN for the brand of the router that you are atacking. 
+* Take care of AP Rate. If the router is blocked for WPS PIN you can try DoS the router so the owner will restart the router and you can try it again.
+
+### sslstrip
+
+>  
+
+### dsniff
+
+> 
 
 ## Miscellaneous
+
+### Add interceptor to redirect requests from port 80 to 8080 
+
+> iptables -t nat -A PREROUTING -ptcp --destination-port 80 -j REDIRECT --to-port 8080 
+
+### ???
+
+> echo 1 > /proc/sys/net/ipv4/ip_forward
+
+### Manually Change Interface Channel
+
+> iwconfig `INTERFACE` channel `NUMBER`
 
 ### Change local DNS provider
 

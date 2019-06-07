@@ -131,7 +131,9 @@ Looks up for DNS information of an domain.
 First change the wireless card to promíscuos Mode:
 
 > ifconfig `CARDNAME` down
+>
 > ifconfig `CARDNAME` mode monitor
+>
 > ifconfig `CARDNAME` up
 
 This will allow to the card read data not directed to it.

@@ -14,9 +14,11 @@ Feel free to submit any fixes to any text in this repository to contribute for a
 
 * articles - Mostly in PTBR
 * study - Mostly study notes
-  * [Certified Ethica Hacker “Training”](./study/CEH.md)
+  * [Certified Ethica Hacker “Training”](./study/ceh.md)
 * cheatsheets
   * [vscode](./cheatsheets/vscode.md)
+  * [vimium](./cheatsheets/vimium.md)
+  * [vim](./cheatsheets/vim.md)
 
 ## License
 
